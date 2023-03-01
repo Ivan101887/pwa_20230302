@@ -2,10 +2,11 @@
   "name": "PWA_DEMO: This is first PWA practice with service work",
   "short_name": "My PWA DEMO",
   "icons": [{
-    "src": "/bear.png",
+    "src": "../src/image/bear.png",
     "sizes": "512X512",
     "type": "image/png"
   }],
+  "scope": "/",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

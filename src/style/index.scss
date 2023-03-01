@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "./normalize";
+
+body {
+  background: {
+    color: #555;
+  }
+}
+.title {
+  font: {
+    size: 50px;
+    weight: 700;
+  }
+  color: #eee;
+  margin: {
+    top: 12px;
+    bottom: 12px;
+  }
+  text-align: center;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
