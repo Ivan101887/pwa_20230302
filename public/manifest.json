@@ -1,0 +1,14 @@
+{
+  "name": "PWA_DEMO: This is first PWA practice with service work",
+  "short_name": "My PWA DEMO",
+  "icons": [{
+    "src": "/bear.png",
+    "sizes": "512X512",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ED4544",
+  "theme_color": "#000"
+}
