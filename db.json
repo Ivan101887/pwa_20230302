@@ -1,39 +1,36 @@
 {
-  "posts": [
+  "webDev": [
     {
       "id": 1,
-      "author": "Away",
-      "title": "轉角遇到 Vue",
-      "content": "Vue.js 是一個用於建立使用者介面的開源 Model-view-viewmodel 前端 JavaScript 框架，也是一個建立單頁應用的 Web 應用框架。它由尤雨溪建立，由他和其他活躍的核心團隊成員維護。2016 年一項針對 JavaScript 框架的調查表明， Vue 有著 89% 的開發者滿意度。",
-      "updateTime": 1647401989000
+      "item": "html"
     },
     {
       "id": 2,
-      "author": "Mike",
-      "title": "NUXT.js 前端開發實戰手冊",
-      "content": "Nuxtjs是一個基於 Vuejs、Nodejs、Webpack 和 Babel.js 的免費開放原始碼的 web 應用架構，該框架被宣傳為「通用應用程式的元框架」。與 SPA 相比，這種方法的好處是減少了互動時間和改進了 SEO，因為在執行任何客戶端JavaScript之前，Web伺服器正在讓每個頁面的內容完整顯示出來。",
-      "updateTime": 1647568962000
+      "item": "javascript"
     },
     {
       "id": 3,
-      "author": "奶茶綠",
-      "title": "React全攻略 - 入門到進階",
-      "content": "React，是一個為資料提供彩現為HTML視圖的開源JavaScript 庫・React视圖通常採用包含以自訂HTML標記規定的其他組件的組件彩現，React為程式設計師提供了一種子組件不能直接影響外層組件的模型，資料改變時對 HTML文件的有效更新，和現代單頁應用中組件之間乾淨的分離。",
-      "updateTime": 1647568979000
+      "item": "css"
     },
     {
       "id": 4,
-      "author": "Away",
-      "title": "Git 月光寶盒",
-      "content": "git是一個分散式版本控制軟體,最初由林納斯托瓦茲創作,於2005年以GPL授權條款釋出。最初目的是為了更好地管理Linux核心開發而設計應注意的是,這與GNUIntactiveTools不同。git最初的開動力來自於BitKeeper和Monotone*",
-      "updateTime": 1647569165000
+      "item": "scss"
     },
     {
       "id": 5,
-      "author": "Hammer",
-      "title": "Photoshop 眼見不一定為憑",
-      "content": "Adobe Photoshop 是一個由 Adobe 開發和發行的影像處理軟體，該軟體提供對 Windows 和 macOS 的支援。Photoshop 由托馬斯諾爾和約翰·諾爾在 1988 年首次發布新版本。",
-      "updateTime": 1651488977000
+      "item": "webpack"
+    },
+    {
+      "id": 6,
+      "item": "vue"
+    },
+    {
+      "id": 7,
+      "item": "REACT"
+    },
+    {
+      "id": 8,
+      "item": "angular"
     }
   ]
 }

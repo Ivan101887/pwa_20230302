@@ -1,17 +1,21 @@
-const cacheList = [
-  '/src',
+const resourcesToCache = [
   '/index.html',
+  '/src/js/main.js',
+  '/src/image/bear.png',
+  '/src/style/index.css',
 ];
-const cacheName = 'cache-v1';
+const staticCacheName = 'static_cache_v1';
+const DynamicCacheName = 'dynamic_cache_v1';
 
 // install
 self.addEventListener('install', event => {
-  console.log('installing...');
+  console.log('[Service worker] service worker installing...');
   event.waitUntil(
-    caches.open(cacheName).then(cache => {
-      console.log('Caching app ok');
-      return cache.addAll(cacheList);
-    })
+    caches.open(staticCacheName)
+      .then(cache => {
+        console.log('[Service worker] Caching app ok');
+        return cache.addAll(resourcesToCache);
+      })
   );
 });
 
@@ -20,15 +24,16 @@ self.addEventListener('activate', event => {
   console.log('now ready to handle fetches!');
   event.waitUntil(
     caches.keys().then(cacheNames => {
-      const promiseArr = cacheNames.map(item => {
-        if (item !== cacheName) {
+      const promiseArr = cacheNames.map(key => {
+        if (key !== staticCacheName && key !== DynamicCacheName) {
           // Delete that cached file
-          return caches.delete(item);
+          return caches.delete(key);
         }
       });
       return Promise.all(promiseArr);
     })
   ); // end e.waitUntil
+  return self.client.claims();
 });
 
 // fetch
@@ -40,7 +45,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => {
       return response || fetch(event.request).then(res =>
         // 存 caches 之前，要先打開 caches.open(dataCacheName)
-        caches.open(cacheName).then(cache => {
+        caches.open(DynamicCacheName).then(cache => {
           // cache.put(key, value)
           // 下一次 caches.match 會對應到 event.request
           cache.put(event.request.url, res.clone());
